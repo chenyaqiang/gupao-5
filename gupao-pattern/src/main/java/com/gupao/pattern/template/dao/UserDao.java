@@ -17,7 +17,7 @@ public class UserDao {
     public List<?> query(String sql, Object[] values) throws Exception {
         return jdbcTemplate.executeQuery(sql, new RowMapper() {
             @Override
-            public Object mapRow(ResultSet rs, int rowNum) throws Exception {
+            public Object mapRow(ResultSet rs) throws Exception {
                 User user = new User();
                 user.setId(rs.getInt("id"));
                 user.setName(rs.getString("name"));

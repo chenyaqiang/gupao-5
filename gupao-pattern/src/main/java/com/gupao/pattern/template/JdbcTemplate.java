@@ -76,9 +76,8 @@ public class JdbcTemplate {
 
     private List<?> parseResultSet(ResultSet rs, RowMapper<?> rowMapper) throws Exception {
         List<Object> list = new ArrayList<>();
-        int rowNum = 1;
         while (rs.next()) {
-            list.add(rowMapper.mapRow(rs, rowNum++));
+            list.add(rowMapper.mapRow(rs));
         }
         return list;
     }
