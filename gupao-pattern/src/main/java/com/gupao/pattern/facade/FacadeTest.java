@@ -4,11 +4,11 @@ public class FacadeTest {
 
     public static void main(String[] args) {
 
-        Menu taocan1 = new Menu();
-        System.out.println("两荤两素：" + taocan1.twoMeetTwoVegetable());
+        Menu menu = new Menu();
+        System.out.println("套餐A,两荤两素：" + menu.taocanA());
 
         Menu taocan2 = new Menu();
-        System.out.println("两荤一素：" + taocan2.twoMeetOneVegetable());
+        System.out.println("套餐B,两荤一素：" + menu.taocanB());
 
     }
 }
