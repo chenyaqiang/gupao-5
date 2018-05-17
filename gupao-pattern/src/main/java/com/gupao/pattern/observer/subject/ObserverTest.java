@@ -21,6 +21,14 @@ public class ObserverTest {
 
             subject.add();
             subject.remove();
+
+            System.out.println("============================分割线===============================");
+            //通过动态代理进行监控，减少代码入侵
+            Subject proxy = (Subject) new SubjectProxy().getSubjectProxy(Subject.class);
+
+            proxy.add();
+            proxy.remove();
+
         } catch (Exception e) {
             e.printStackTrace();
         }

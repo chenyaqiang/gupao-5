@@ -4,7 +4,7 @@ import com.gupao.pattern.observer.core.EventListenter;
 
 public class Subject extends EventListenter {
 
-    //通常的话，采用动态里来实现监控，避免了代码侵入
+    //通常的话，采用动态代理来实现监控，避免了代码侵入
     public void add() {
         System.out.println("调用添加的方法");
         trigger(SubjectEventType.ON_ADD);

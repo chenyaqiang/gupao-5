@@ -9,7 +9,7 @@ import java.util.Map;
  */
 public class EventListenter {
 
-    protected Map<Enum, Event> events = new HashMap<>();
+    protected static Map<Enum, Event> events = new HashMap<>();
 
 
     public void addLisenter(Enum eventType, Object target, Method callback) {
