@@ -19,5 +19,7 @@ public class LazyThreeTest {
         Object o2 = c.newInstance();
 
         System.out.println(o1 == o2);
+
+
     }
 }
