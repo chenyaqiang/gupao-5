@@ -9,6 +9,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.util.List;
 
 public class Demo {
 
@@ -20,7 +21,10 @@ public class Demo {
 
     public static void main(String[] args) throws FileNotFoundException {
 
-        UserMapper userMapper = getSqlSession().getMapper(UserMapper.class);
-        User user = userMapper.selectByPrimaryKey(1);
+
+        UserMapper userMapper = getSqlSession().getMapper(UserMapper.class); //UserMapper是通过代理得到的MapperProxy
+//        User user = userMapper.selectByPrimaryKey(1);
+        List<User> user = userMapper.selectList();
+        System.out.println(user);
     }
 }

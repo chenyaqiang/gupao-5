@@ -2,6 +2,8 @@ package com.gupao.mybatis.mapper;
 
 import com.gupao.mybatis.bean.User;
 
+import java.util.List;
+
 public interface UserMapper {
     int deleteByPrimaryKey(Integer id);
 
@@ -10,6 +12,8 @@ public interface UserMapper {
     int insertSelective(User record);
 
     User selectByPrimaryKey(Integer id);
+
+    List<User> selectList();
 
     int updateByPrimaryKeySelective(User record);
 
