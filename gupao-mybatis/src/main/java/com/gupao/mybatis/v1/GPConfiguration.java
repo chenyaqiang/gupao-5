@@ -9,13 +9,13 @@ import java.util.Map;
 
 public class GPConfiguration {
 
-    public static final Map<String, Map<String, String>> mapperRegistry = new HashMap<>();
+    public static final Map<String, Map<String, String>> mapperRegistory = new HashMap<>();
 
     static {
         Map<String, String> map = new HashMap<>();
         map.put("selectByPrimaryKey", "select * from user where id = ?");
         map.put("selectList", "select * from user");
-        mapperRegistry.put(UserMapper.class.getName(), map);
+        mapperRegistory.put(UserMapper.class.getName(), map);
     }
 
     public <T> T getMapper(Class<T> clazz, GPSqlSession sqlSession) {

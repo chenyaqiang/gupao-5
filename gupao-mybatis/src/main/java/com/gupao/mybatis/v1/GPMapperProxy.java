@@ -19,7 +19,7 @@ public class GPMapperProxy implements InvocationHandler {
     public Object invoke(Object o, Method method, Object[] args) throws Throwable {
 
 
-        Map methodMapper = GPConfiguration.mapperRegistry.get(method.getDeclaringClass().getName());
+        Map methodMapper = GPConfiguration.mapperRegistory.get(method.getDeclaringClass().getName());
         if (methodMapper != null) {
             String sql = (String) methodMapper.get(method.getName());
 
